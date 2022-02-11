@@ -1,5 +1,4 @@
 import Chart from "../Chart/Chart";
-import "./ExpensesChart.css";
 
 const ExpensesChart = (props) => {
   const expenses = [
