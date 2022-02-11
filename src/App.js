@@ -28,10 +28,10 @@ const App = () => {
   const [enteredExpenses, updateExpenses] = useState(DUMMY_ARRAY);
 
   const addExpenseHandler = (expense) => {
-    updateExpenses((prevState) => { 
+    updateExpenses((prevState) => {
       return [expense, ...prevState];
     });
-  }
+  };
 
   return (
     <div>
