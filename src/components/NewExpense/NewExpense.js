@@ -3,18 +3,18 @@ import "./NewExpense.css";
 import ExpenseForm from "./ExpenseForm";
 
 const NewExpense = (props) => {
+  const [expenseView, updateExpenseView] = useState(false);
+
+  const expenseViewHandler = () => {
+    updateExpenseView(!expenseView);
+  };
+
   const saveExpenseDataHandler = (enteredExpenseData) => {
     const expenseData = {
       id: Math.random().toString(),
       ...enteredExpenseData,
     };
     props.onAddExpense(expenseData);
-  };
-
-  const [expenseView, updateExpenseView] = useState(false);
-
-  const expenseViewHandler = () => {
-    updateExpenseView(!expenseView);
   };
 
   return (
