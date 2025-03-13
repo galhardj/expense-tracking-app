@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import "./NewExpense.css";
 import ExpenseForm from "./ExpenseForm";
+import { logEvent } from "../../lib/analytics";
 
 const NewExpense = (props) => {
   const [expenseView, updateExpenseView] = useState(false);
 
   const expenseViewHandler = () => {
     updateExpenseView(!expenseView);
+    logEvent("Button", "Clack", "Subscribe Button");
   };
 
   const saveExpenseDataHandler = (enteredExpenseData) => {
@@ -18,7 +20,7 @@ const NewExpense = (props) => {
   };
 
   return (
-    <div class="new-expense">
+    <div className="new-expense">
       {!expenseView && (
         <button type="new-expense button" onClick={expenseViewHandler}>
           Add New Expense
