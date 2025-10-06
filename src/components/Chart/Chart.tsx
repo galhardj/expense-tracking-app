@@ -1,7 +1,9 @@
+import React from "react";
 import ChartBar from "./ChartBar";
+import { ChartProps } from "../../types/expense";
 import "./Chart.css";
 
-const Chart = (props) => {
+const Chart: React.FC<ChartProps> = (props) => {
   const expenseValues = props.dataPoints.map(
     (expenseValue) => expenseValue.value
   );

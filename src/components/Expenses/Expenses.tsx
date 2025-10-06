@@ -4,12 +4,13 @@ import Card from "../UI/Card";
 import ExpensesFilter from "./ExpensesFilter";
 import ExpensesList from "./ExpensesList";
 import ExpensesChart from "./ExpensesChart";
+import { ExpensesProps } from "../../types/expense";
 import "./Expenses.css";
 
-const Expenses = (props) => {
-  const [filteredYear, updateFilteredYear] = useState("2021");
+const Expenses: React.FC<ExpensesProps> = (props) => {
+  const [filteredYear, updateFilteredYear] = useState<string>("2021");
 
-  const filterChangeHandler = (selectedYear) => {
+  const filterChangeHandler = (selectedYear: string) => {
     updateFilteredYear(selectedYear);
   };
 

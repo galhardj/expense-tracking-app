@@ -1,10 +1,12 @@
+import React from "react";
+import { ChartBarProps } from "../../types/expense";
 import "./ChartBar.css";
 
-const ChartBar = (props) => {
+const ChartBar: React.FC<ChartBarProps> = (props) => {
   let barFillHeight = "0%";
 
   if (props.maxValue > 0) {
-    barFillHeight = Math.round((props.value / props.maxValue) * 100);
+    barFillHeight = Math.round((props.value / props.maxValue) * 100) + "%";
   }
 
   return (

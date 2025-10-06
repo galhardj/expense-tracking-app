@@ -1,9 +1,10 @@
+import React from "react";
 import ExpenseDate from "./ExpenseDate";
 import Card from "../UI/Card";
+import { ExpenseItemProps } from "../../types/expense";
 import "./ExpenseItem.css";
 
-const ExpenseItem = (props) => {
-
+const ExpenseItem: React.FC<ExpenseItemProps> = (props) => {
   return (
     <li>
       <Card className="expense-item">

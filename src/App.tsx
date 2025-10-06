@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar"; // Navbar uses <Link>
 import Home from "./pages/Home";
 import NewPage from "./pages/NewPage";
 
-function App() {
+const App: React.FC = () => {
   return (
     <Router>
       <Navbar />
@@ -14,6 +14,6 @@ function App() {
       </Switch>
     </Router>
   );
-}
+};
 
 export default App;

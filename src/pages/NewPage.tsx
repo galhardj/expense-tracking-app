@@ -1,6 +1,6 @@
 import React from "react";
 
-const NewPage = () => {
+const NewPage: React.FC = () => {
   return (
     <div>
       <h1>Welcome to the New Page</h1>

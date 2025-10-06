@@ -1,8 +1,9 @@
+import React, { Fragment } from "react";
 import ExpenseItem from "./ExpenseItem";
-import { Fragment } from "react";
+import { ExpensesListProps } from "../../types/expense";
 import "./ExpensesList.css";
 
-const ExpensesList = (props) => {
+const ExpensesList: React.FC<ExpensesListProps> = (props) => {
   if (props.items.length === 0) {
     return (
       <h2 className="expenses-list__fallback">

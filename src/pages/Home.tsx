@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import Expenses from "../components/Expenses/Expenses";
 import NewExpense from "../components/NewExpense/NewExpense";
+import { Expense } from "../types/expense";
 
-const DUMMY_ARRAY = [
+const DUMMY_ARRAY: Expense[] = [
   {
     id: "e1",
     title: "Toilet Paper",
@@ -24,10 +25,10 @@ const DUMMY_ARRAY = [
   },
 ];
 
-const Home = () => {
-  const [enteredExpenses, updateExpenses] = useState(DUMMY_ARRAY);
+const Home: React.FC = () => {
+  const [enteredExpenses, updateExpenses] = useState<Expense[]>(DUMMY_ARRAY);
 
-  const addExpenseHandler = (expense) => {
+  const addExpenseHandler = (expense: Expense) => {
     updateExpenses((prevState) => {
       return [expense, ...prevState];
     });
